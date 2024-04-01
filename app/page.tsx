@@ -1,16 +1,13 @@
-import { Bricolage_Grotesque, Pinyon_Script } from "next/font/google";
+import { Bricolage_Grotesque, Pinyon_Script, Inter } from "next/font/google";
 import graphicX from "@/app/assets/heroX.png";
 import Image from "next/image";
 
-const bricolage = Bricolage_Grotesque({
-  subsets: ["latin"],
-  weight: ["400", "800"],
-});
 const pinyon = Pinyon_Script({ subsets: ["latin"], weight: ["400"] });
+const inter = Inter({ subsets: ["latin"], weight: ["900"] });
 
 export default function Home() {
   return (
-    <div className={`${bricolage.className}`}>
+    <div className={""}>
       {/* Hero section */}
       <div className="px-20 pt-10">
         <div className="flex flex-row justify-between">
@@ -21,10 +18,16 @@ export default function Home() {
           <p className="text-xl uppercase">8th edition</p>
         </div>
         <div className="relative flex items-center justify-center">
-          <span className="absolute text-center text-[35rem] font-extrabold text-ted-red">
+          <span
+            className={`${inter.className} absolute text-center text-[35rem] font-black text-ted-red`}
+          >
             X
           </span>
-          <Image src={graphicX} alt="TEDx IIITDelhi" className="opacity-40" />
+          <Image
+            src={graphicX}
+            alt="TEDx IIITDelhi"
+            className="mix-blend-luminosity"
+          />
         </div>
       </div>
     </div>
