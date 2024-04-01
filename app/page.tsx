@@ -1,13 +1,14 @@
 import { Bricolage_Grotesque, Pinyon_Script, Inter } from "next/font/google";
 import graphicX from "@/app/assets/heroX.png";
 import Image from "next/image";
+import X from "@/app/assets/X.svg";
 
 const pinyon = Pinyon_Script({ subsets: ["latin"], weight: ["400"] });
 const inter = Inter({ subsets: ["latin"], weight: ["900"] });
 
 export default function Home() {
   return (
-    <div className={""}>
+    <div className={``}>
       {/* Hero section */}
       <div className="px-20 pt-10">
         <div className="flex flex-row justify-between">
@@ -19,10 +20,11 @@ export default function Home() {
         </div>
         <div className="relative flex items-center justify-center">
           <span
-            className={`${inter.className} absolute text-center text-[35rem] font-black text-ted-red`}
+            className={`${inter.className} absolute text-center text-[33rem]  font-black text-ted-red`}
           >
             X
           </span>
+          <Image className="absolute" src={X} alt="X" />
           <Image
             src={graphicX}
             alt="TEDx IIITDelhi"

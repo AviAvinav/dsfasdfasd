@@ -2,17 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { Bricolage_Grotesque } from "next/font/google";
-import localFont from "next/font/local";
 
-// const bricolage = Bricolage_Grotesque({
-//   subsets: ["latin"],
-//   weight: ["400", "800"],
-// });
-
-const foundersGrotesk = localFont({
-  src: "../public/FoundersGrotesk-Regular.otf",
-  display: "swap",
-  weight: "400",
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["400", "800"],
 });
 
 export const metadata: Metadata = {
@@ -27,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${foundersGrotesk.className} bg-black text-white`}>
+      <body className={`${bricolage.className} bg-black text-white`}>
         <Navbar />
         {children}
       </body>
